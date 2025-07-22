@@ -1,29 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmaquine <mmaquine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/28 14:40:16 by mmaquine          #+#    #+#             */
-/*   Updated: 2025/05/28 15:11:56 by mmaquine         ###   ########.fr       */
+/*   Created: 2025/06/16 13:45:53 by mmaquine          #+#    #+#             */
+/*   Updated: 2025/06/16 18:18:13 by mmaquine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
-
-void	ft_print_alphabet(void);
-
-void	ft_print_alphabet(void)
+int	ft_fibonacci(int index)
 {
-	char	end;
-	char	c;
+	int	nminus1;
+	int	n;
+	int	temp;
 
-	c = 'a';
-	end = 'z';
-	while (c <= end)
+	nminus1 = 0;
+	n = 1;
+	if (index < 0)
+		return (-1);
+	if (index == 0)
+		return (0);
+	if (index == 1)
+		return (1);
+	while (index > 1)
 	{
-		write(1, &c, 1);
-		c = c + 1;
+		temp = nminus1 + n;
+		nminus1 = n;
+		n = temp;
+		index--;
 	}
+	return (n);
 }
+/*
+#include <stdio.h>
+#include <stdlib.h>
+int	main(int argc, char **argv)
+{
+	if (argc > 1)
+	{
+		printf("%d\n", ft_fibonacci(atoi(argv[1])));
+	}
+}*/

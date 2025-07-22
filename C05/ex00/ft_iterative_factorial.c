@@ -1,19 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmaquine <mmaquine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/28 14:06:22 by mmaquine          #+#    #+#             */
-/*   Updated: 2025/05/28 14:29:02 by mmaquine         ###   ########.fr       */
+/*   Created: 2025/06/16 09:38:38 by mmaquine          #+#    #+#             */
+/*   Updated: 2025/06/16 17:31:10 by mmaquine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include<unistd.h>
 
-void	ft_putchar(char c);
-
-void	ft_putchar(char c)
+int	ft_iterative_factorial(int nb)
 {
-	write(1, &c, 1);
+	int	fat;
+
+	if (nb < 0)
+		return (0);
+	fat = 1;
+	while (nb > 1)
+	{
+		fat = fat * nb;
+		nb--;
+	}
+	return (fat);
 }

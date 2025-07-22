@@ -1,19 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmaquine <mmaquine@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mmaquine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/28 14:06:22 by mmaquine          #+#    #+#             */
-/*   Updated: 2025/05/28 14:29:02 by mmaquine         ###   ########.fr       */
+/*   Created: 2025/05/30 16:05:34 by mmaquine          #+#    #+#             */
+/*   Updated: 2025/06/05 14:55:30 by mmaquine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include<unistd.h>
 
-void	ft_putchar(char c);
+int	ft_strlen(char *str);
 
-void	ft_putchar(char c)
+int	ft_strlen(char *str)
 {
-	write(1, &c, 1);
+	int	len;
+
+	len = 0;
+	if (!str)
+		return (0);
+	else
+	{
+		while (str[len] != '\0')
+			len++;
+		return (len);
+	}
 }

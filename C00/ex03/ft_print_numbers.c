@@ -1,19 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmaquine <mmaquine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/28 14:06:22 by mmaquine          #+#    #+#             */
-/*   Updated: 2025/05/28 14:29:02 by mmaquine         ###   ########.fr       */
+/*   Created: 2025/05/28 15:28:12 by mmaquine          #+#    #+#             */
+/*   Updated: 2025/05/28 15:37:41 by mmaquine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include<unistd.h>
 
-void	ft_putchar(char c);
+void	ft_print_numbers(void);
 
-void	ft_putchar(char c)
+void	ft_print_numbers(void)
 {
-	write(1, &c, 1);
+	char	number;
+
+	number = '0';
+	while (number <= '9')
+	{
+		write(1, &number, 1);
+		number++;
+	}
 }
