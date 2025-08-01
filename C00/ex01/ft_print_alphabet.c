@@ -6,13 +6,11 @@
 /*   By: mmaquine <mmaquine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 14:40:16 by mmaquine          #+#    #+#             */
-/*   Updated: 2025/05/28 15:11:56 by mmaquine         ###   ########.fr       */
+/*   Updated: 2025/08/01 13:46:12 by mmaquine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<unistd.h>
-
-void	ft_print_alphabet(void);
 
 void	ft_print_alphabet(void)
 {
